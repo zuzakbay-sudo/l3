@@ -1,0 +1,24 @@
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+
+class Student(Person):
+    def __init__(self, name, gpa):
+        super().__init__(name)
+        self.gpa = gpa
+
+    def display(self):
+        print(f"Student: {self.name}, GPA: {self.gpa}")
+
+
+# Input
+data = input().split()
+name = data[0]
+gpa = float(data[1])
+
+# Create Student object
+student = Student(name, gpa)
+
+# Display information
+student.display()
